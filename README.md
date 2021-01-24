@@ -1,1 +1,1 @@
-# problem-solving
+# studying algorithm
