@@ -1,4 +1,4 @@
-**볼드**# Studying algorithm
+**볼드** # Studying algorithm
 
 + ## 2021.01.27
 + ## BOJ (1010) - 다리 놓기
