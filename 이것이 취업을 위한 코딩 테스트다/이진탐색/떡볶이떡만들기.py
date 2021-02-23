@@ -6,8 +6,9 @@ end = arr[n-1]
 mid = (start+end)//2
 while start<=end:
     for x in arr:
+        mid = (set+end)//2
         if x>mid:
-            mid = (set+end)//2
-            start -1
+            start = mid +1
         else:
-            set
+            result = mid
+            end  = mid -1
