@@ -13,5 +13,5 @@ for item in m_arr:
             return print("yes")
         elif half < item:
             pass
-        else:
+        elif:
             pass
