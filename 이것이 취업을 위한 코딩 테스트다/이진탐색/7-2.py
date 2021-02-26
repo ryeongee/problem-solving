@@ -7,4 +7,4 @@ def bin_search(start,end,array,target):
     elif array[mid]> target:
         return bin_search(start,mid-1,array,target)
     else:
-        return bin_search(mid+1,end,array,target)
+        return bin_search(mid+1,end,array,target);
