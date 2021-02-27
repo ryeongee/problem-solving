@@ -3,7 +3,7 @@ def bin_search(start,end,array,target):
         return None
     mid = (start+end)//2
     if array[mid] == target:
-        return mid
+        return mid;
     elif array[mid]> target:
         return bin_search(start,mid-1,array,target);
     else:
