@@ -1,4 +1,4 @@
-# Studying algorithm 
+# Studying algorithm
 
 + ## 2021.01.27
 + ### BOJ (1010) - 다리 놓기
@@ -45,3 +45,6 @@
 
 + ## 2021.02.01
 + ### BOJ (1463) - 1로 만들기
+
++ ## 2021.03.21
++ ### Codeforce (#702) - Dense Array
