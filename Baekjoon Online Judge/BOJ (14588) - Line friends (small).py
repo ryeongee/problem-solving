@@ -36,7 +36,6 @@ def dijkstra(start):
                 heapq.heappush(q, (cost, i[0]))
 q = int(input())
 for i in range(q):
-
     # 최단 거리 테이블을 모두 무한으로 초기화
     distance = [INF] * (n + 1)
     # 시작 노드 번호를 입력받기
