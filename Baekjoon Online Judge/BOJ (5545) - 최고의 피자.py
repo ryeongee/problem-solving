@@ -1,5 +1,5 @@
-#price = A+B*k
-#cal = C+sigma(Di)
+#https://www.acmicpc.net/problem/5545
+
 n = int(input())
 a,b = map(int, input().split())
 c = int(input())
