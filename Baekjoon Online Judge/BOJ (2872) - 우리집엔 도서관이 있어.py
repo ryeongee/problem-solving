@@ -1,23 +1,16 @@
 #https://www.acmicpc.net/problem/2872
-ans = []
-# def sorting(arr, n):
-#     max = 0
-#     for i in range(n):
-#         if arr[i]> max:
-#             max = arr[i]
-#     arr = arr[:max-1]
-#     # del a[max]
-#     sorting(arr, n-1)
-#     return ans.append(arr[max])
-
-n = int(input())
-books = []
-answer = []
-for _ in range(n):
-    books.append(int(input()))
+import sys
+n=int(input())
 cnt = 0
-while True:
-    maximum = max(books)
-    del books[maximum]
-    if max(books) != item and :
-        cnt += 1
+d = []
+for i in range(n):
+ d.append(int(sys.stdin.readline()))
+max = d[0]
+for i in range(1,n) :
+ if d[i] > max :
+   if max+1 != d[i] :
+     cnt +=1
+   max = d[i]
+ else :
+   cnt +=1
+print(cnt)
