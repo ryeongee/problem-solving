@@ -1,16 +1,19 @@
 #https://www.acmicpc.net/problem/2872
 import sys
-n=int(input())
+N = int(sys.stdin.readline())
+bks = []
 cnt = 0
-d = []
-for i in range(n):
- d.append(int(sys.stdin.readline()))
-max = d[0]
-for i in range(1,n) :
- if d[i] > max :
-   if max+1 != d[i] :
-     cnt +=1
-   max = d[i]
- else :
-   cnt +=1
+for _ in range(N):
+    bks.append(int(sys.stdin.readline()))
+
+_max = bks[0]
+
+for i in range(1,N):
+    if _max < bks[i]:
+        if _max+1 != bks[i]:
+            cnt+=1
+        _max = bks[i]
+    else:
+        cnt+=1
+
 print(cnt)
