@@ -5,7 +5,7 @@ for _ in range(T):
     cards = list(map(str, input().split()))
     my = [cards[0]]
     for i in range(1,N):
-        if ord(cards[i]) <= ord(my[0]):
+        if cards[i] <= my[0]:
             my.insert(0,cards[i])
         else:
             my.append(cards[i])
