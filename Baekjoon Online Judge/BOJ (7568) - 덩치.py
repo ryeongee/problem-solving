@@ -1,4 +1,5 @@
 # https://roseline124.github.io/algorithm/2019/04/06/Altorithm-baekjoon-7568.html
+
 N = int(input())
 
 people = []
@@ -11,7 +12,7 @@ for c in people :
 
     for n in people:
         if (c[0]!=n[0]) & (c[1]!=n[1]):
-            if (c[0]<n[0]) & (c[1]<n[1]): 
+            if (c[0]<n[0]) & (c[1]<n[1]):
                 rank += 1
 
     print(rank)
