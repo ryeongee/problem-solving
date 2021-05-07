@@ -3,6 +3,7 @@
 N = int(input())
 
 people = []
+
 for _ in range(N):
     w, h = map(int, input().split())
     people.append((w, h))
