@@ -7,6 +7,8 @@ KeyBoard = {
     "S": "A", "D": "S", "F": "D", "G": "F", "H": "G", "J": "H", "K": "J", "L": "K", ";": "L", "'": ";",
     "X": "Z", "C": "X", "V": "C", "B": "V", "N": "B", "M": "N", ",": "M", ".": ",", "/": ".", " ": " "
 }
+
+
 def solution():
     while True:
         try:
@@ -15,4 +17,6 @@ def solution():
             print()
         except:
             break
+
+
 solution()
