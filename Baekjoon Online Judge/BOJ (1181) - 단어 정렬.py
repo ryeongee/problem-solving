@@ -7,11 +7,32 @@ for item in range(N):
 
 
 def sort_order(lst: list) -> list:
-    pass
+    new_lst = []
+    for i in range(len(lst)):
+        min_order = 0
+        min_value = "zzzzzz"
+        for j in range(len(lst)):
+            if lst[i] < min_value:
+                min_value = lst[i]
+        print(lst)
+        print(min_value)
+        lst.remove(min_value)
+        new_lst.append(min_value)
+
 
 
 def sort_length(lst: list) -> list:
-    pass
+    new_lst = []
+    for i in range(len(lst)):
+        shortest_length = 1000
+        shortest_value = 0
+        for j in range(len(lst)):
+            if len(lst[j]) < shortest_length:
+                shortest_length = len(lst[j])
+                shortest_value = lst[j]
+        lst.remove(shortest_value)
+        new_lst.append(shortest_value)
+    return new_lst
 
 
 def remove_overlap(lst: list) -> list:
@@ -29,8 +50,9 @@ def print_words(lst: list):
 def main():
     global words
     ans_words = remove_overlap(words)
+    sort_order(ans_words)
     ans_words.sort()
-    ans_words.sort(key=len)
+    ans_words = sort_length(ans_words)
     print_words(ans_words)
 
 
