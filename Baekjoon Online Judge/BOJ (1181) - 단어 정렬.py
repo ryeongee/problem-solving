@@ -8,17 +8,23 @@ for item in range(N):
 
 def sort_order(lst: list) -> list:
     new_lst = []
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+                'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+                'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     for i in range(len(lst)):
         min_order = 0
         min_value = "zzzzzz"
-        for j in range(len(lst)):
-            if lst[i] < min_value:
-                min_value = lst[i]
+        words_stack = []
+        if lst[i] == alphabet[i]:
+            words_stack.append(lst[i])
+        if words_stack:
+            for j in range(len(words_stack)):
+                while True:
+
         print(lst)
         print(min_value)
         lst.remove(min_value)
         new_lst.append(min_value)
-
 
 
 def sort_length(lst: list) -> list:
