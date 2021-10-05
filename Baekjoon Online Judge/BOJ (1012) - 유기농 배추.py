@@ -4,7 +4,6 @@ sys.setrecursionlimit(10**6)
 def dfs(x,y):
     if x<0 or x>=N or y<0 or y>=M:
         return True
-        
     if graph[x][y] == 1:
         graph[x][y] = 0
         dfs(x-1,y)
