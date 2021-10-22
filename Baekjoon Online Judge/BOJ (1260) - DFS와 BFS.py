@@ -4,7 +4,6 @@ https://www.acmicpc.net/problem/1260
 from collections import deque
 import sys
 sys.setrecursionlimit(10**6)
-
 _n,_e,v = map(int, input().split())
 visited_1 = [False]*(1001)
 visited_2 = [False]*(1001)
