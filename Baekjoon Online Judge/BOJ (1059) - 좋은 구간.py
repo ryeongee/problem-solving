@@ -1,1 +1,1 @@
-Aaassssss
+print('a')

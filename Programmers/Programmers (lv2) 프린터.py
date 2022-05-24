@@ -1,7 +1,6 @@
 def solution(priorities, location):
     answer = 0
     queue = priorities
-    new_lst = []
     ptr = location
     while(queue):
         flag = False
@@ -17,7 +16,6 @@ def solution(priorities, location):
                 break
         if(flag is False):
             answer += 1
-            new_lst.append(j)
             if(ptr == len(queue)):
                 break
     return answer
