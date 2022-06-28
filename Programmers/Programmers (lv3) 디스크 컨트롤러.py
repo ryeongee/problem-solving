@@ -1,3 +1,4 @@
+# https://programmers.co.kr/learn/courses/30/lessons/42627
 import heapq
 
 
@@ -18,7 +19,8 @@ def solution(jobs):
             sum_t += now - current[1]
         else:
             now += 1
-    return int(sum_t/len(jobs))
+    answer = int(sum_t/len(jobs))
+    return answer
 
 
 solution([[1, 9], [0, 3], [2, 6]])
