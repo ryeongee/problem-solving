@@ -1,8 +1,6 @@
 def splitFile(file: str):
     head, number, tail = "", "", ""
     number_check = False
-    # ptr1 = 0
-    # ptr2 = len(file)
     for i in range(len(file)):
         if file[i].isdigit():
             number += file[i]
@@ -12,6 +10,8 @@ def splitFile(file: str):
         else:
             tail = file[i:]
             break
+    # ptr1 = 0
+    # ptr2 = len(file)
     # for i in range(len(file)):
     #     if file[i].isdigit():
     #         ptr1 = i
