@@ -1,0 +1,24 @@
+#연속값 찾는 문제
+import sys
+N = int(sys.stdin.readline())
+temp = sys.stdin.readline().split()
+bks = list(map(int, temp))
+
+if N == 1:
+    answer = 1
+else:
+    answerSet = set()
+    maxNum = 0
+    start = 0
+    for _ in range(len(bks)):
+        for i in range(start, len(bks)):
+            if bks[i] == 1:
+                maxNum += 1
+            if bks[i] == 2:
+                maxNum -= 1
+            answerSet.add(maxNum)
+        start += 1
+    answerSet = sorted(answerSet)
+    answer = answerSet[-1]
+
+print(answer)

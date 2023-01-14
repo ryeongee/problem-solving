@@ -1,0 +1,47 @@
+#연속값 찾는 문제
+import sys
+sys.setrecursionlimit(10**9)
+
+alist = list(map(int, sys.stdin.readline().split()))
+N = alist[0]
+M = alist[1]
+
+donut = []
+for _ in range(N):
+    column = list(map(int, sys.stdin.readline().split()))
+    donut.append(column)
+move = {"down" : (0, 1), "right" : (0, 1), "up" : (0, -1), "left" : (0, -1)}
+
+markZone = [[-1] * M for i in range(N)]
+flag = 0
+
+def isMarkedBefore(markZone, x, y):
+    if markZone[x][y] != -1:
+        return True
+    return False
+
+def markEmptyZone2(donut, x, y, markZone, flag):
+    if x == len(donut):
+        x = 0
+    if x == -1:
+        x = len(donut) - 1
+    if y == len(donut[0]):
+        y = 0
+    if y == -1:
+        y = len(donut[0]) - 1
+    if markZone[x][y] == -1 and donut[x][y] == 0:
+        markZone[x][y] = flag
+        markEmptyZone2(donut, x + 1, y, markZone, flag)
+        markEmptyZone2(donut, x - 1, y, markZone, flag)
+        markEmptyZone2(donut, x, y + 1, markZone, flag)
+        markEmptyZone2(donut, x, y - 1, markZone, flag)
+
+for x in range(N):
+    for y in range(M):
+        if donut[x][y] == 0:
+            if isMarkedBefore(markZone, x, y) == False:
+                markEmptyZone2(donut, x, y, markZone, flag)
+                flag += 1
+
+print(flag)
+
