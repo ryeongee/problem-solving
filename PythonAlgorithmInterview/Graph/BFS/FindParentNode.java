@@ -1,4 +1,4 @@
-package PythonAlgorithmInterview.BFS;
+package PythonAlgorithmInterview.Graph.BFS;
 /**
  * https://www.acmicpc.net/problem/11725
  * 트리의 부모 찾기
@@ -20,6 +20,7 @@ public class FindParentNode {
             adj[x][y] = 1;
             adj[y][x] = 1;
         }
+
 
 
     }

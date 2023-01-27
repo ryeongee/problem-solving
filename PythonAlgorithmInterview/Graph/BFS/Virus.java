@@ -1,4 +1,4 @@
-package PythonAlgorithmInterview.BFS;
+package PythonAlgorithmInterview.Graph.BFS;
 /**
  * https://www.acmicpc.net/problem/2606
  * 백준 2606 바이러스
