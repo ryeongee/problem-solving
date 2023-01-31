@@ -1,3 +1,8 @@
+/**
+ * https://www.acmicpc.net/problem/2667
+ * 백준 단지 번호 붙이기
+ */
+
 import java.util.*;
 import java.io.*;
 
