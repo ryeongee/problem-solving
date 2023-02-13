@@ -34,15 +34,15 @@ public class BOJ2630 {
                 WHITE_COUNT++;
             }
         } else{
-            boolean white_flag = false;
-            boolean blue_flag = false;
+            boolean whiteFlag = false;
+            boolean blueFlag = false;
             boolean flag = true;
             int tmp;
             if(PAPER[startX][startY] == 0){
-                white_flag = true;
+                whiteFlag = true;
                 tmp = 0;
             } else{
-                blue_flag = true;
+                blueFlag = true;
                 tmp = 1;
             }
             Loop1:
@@ -59,10 +59,10 @@ public class BOJ2630 {
                     }
                 }
             }
-            if(blue_flag && flag){
+            if(blueFlag && flag){
                 BLUE_COUNT++;
             }
-            if(white_flag && flag){
+            if(whiteFlag && flag){
                 WHITE_COUNT++;
             }
         }
