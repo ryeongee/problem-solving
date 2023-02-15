@@ -16,12 +16,13 @@ import java.io.*;
 
 public class BOJ11441{
     public static void main(String[] args) throws IOException{
+        // input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[] prefixSum = new int[n];
         String[] strItems = br.readLine().split(" ");
         int m = Integer.parseInt(br.readLine());
 
+        int[] prefixSum = new int[n];
         int[] items = makePrefixSum(strItems, n);
         for (int i = 0; i < m; i++) {
             String[] column = br.readLine().split(" ");
@@ -29,13 +30,15 @@ public class BOJ11441{
             for (int j = 0; j < 2; j++) {
                 range[j] = Integer.parseInt(column[j]);
             }
-            prefixSum[i] = items[range[1]] - items[range[0] - 1]; 
+            System.out.println("st : "+ range[0] + " end : "+range[1]);
+            prefixSum[i] = getPrefixSum(items, range[0], range[1]);
         }
 
         for (int item : prefixSum) {
             System.out.println(item);
         }
     }
+
     public static int[] makePrefixSum(String[] strItems, int n){
         int[] items = new int[n];
         int sum = 0;
@@ -47,6 +50,10 @@ public class BOJ11441{
     }
 
     public static int getPrefixSum(int[] items, int start, int end){
-        return items[end] - items[start - 1]; 
+        if(start == 1){
+            return items[end - 1];
+        } else{
+            return items[end - 1] - items[start - 2]; 
+        }
     }
 }
