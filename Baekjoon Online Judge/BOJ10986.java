@@ -25,6 +25,7 @@ public class BOJ10986 {
             }
             cnt[(int) remainArr[i]]++;
         }
+        
         for(int i = 0; i < m; i++){
             if(cnt[i] > 1){
                 answer += (cnt[i] * (cnt[i] - 1)) / 2;
