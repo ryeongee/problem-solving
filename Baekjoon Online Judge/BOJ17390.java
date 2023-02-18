@@ -14,6 +14,7 @@ public class BOJ17390{
         st = new StringTokenizer(br.readLine());
 
         Integer[] a = new Integer[n + 1];
+        a[0] = 0;
         for(int i = 1; i < n + 1; i++){
             a[i] = Integer.parseInt(st.nextToken());
         }
