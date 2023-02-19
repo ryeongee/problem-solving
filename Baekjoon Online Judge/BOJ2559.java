@@ -13,18 +13,24 @@ public class BOJ2559 {
         int k = Integer.parseInt(st.nextToken());
 
         st = new StringTokenizer(br.readLine());
-        int[] arr = new int[n + 1];
-        int maxNum = 0;
+
+        int[] sumArr = new int[n + 1];
         for(int i = 1; i < n + 1; i++){
-            arr[i] = Integer.parseInt(st.nextToken());
-            if(i >= k){
-                int sumNum = 0;
-                for(int j = 0; j < k; j++){
-                    sumNum += arr[i - j];
-                }
-                if(maxNum < sumNum) maxNum = sumNum;
+            sumArr[i] = sumArr[i - 1] + Integer.parseInt(st.nextToken());
+        }
+
+        int maxNum = Integer.MIN_VALUE;
+        for(int i = k; i < n + 1; i++){
+            int start = i - k + 1;
+            int end = i;
+            int tmp = prefix(sumArr, start, end);
+            if(tmp > maxNum){
+                maxNum = tmp;
             }
         }
         System.out.println(maxNum);
+    }
+    public static int prefix(int[] arr, int start, int end){
+        return arr[end] - arr[start - 1];
     }
 }
