@@ -14,19 +14,17 @@ public class BOJ2559 {
 
         st = new StringTokenizer(br.readLine());
         int[] arr = new int[n + 1];
-        for(int i = 1; i < n + 1; i++){
-            arr[i] = arr[i - 1] + Integer.parseInt(st.nextToken());
-        }
-
         int maxNum = 0;
-        for(int j = 1; j < n + 1 - k; j++){
-            int tmp = prefix(arr, j, j + k);
-            if (maxNum > tmp) maxNum = tmp;
+        for(int i = 1; i < n + 1; i++){
+            arr[i] = Integer.parseInt(st.nextToken());
+            if(i >= k){
+                int sumNum = 0;
+                for(int j = 0; j < k; j++){
+                    sumNum += arr[i - j];
+                }
+                if(maxNum < sumNum) maxNum = sumNum;
+            }
         }
-
         System.out.println(maxNum);
-    }
-    public static int prefix(int[] arr, int st, int end){
-        return arr[end] - arr[st - 1];
     }
 }
