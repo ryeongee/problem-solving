@@ -12,18 +12,18 @@ public class BOJ10986 {
         
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-        long[] remainArr = new long[n + 1];
+        long[] sumArr = new long[n + 1];
         long[] cnt = new long[m];
         st = new StringTokenizer(br.readLine());
         long sum = 0;
         long answer = 0;
         for(int i = 1; i < n + 1; i++){
             sum += Integer.parseInt(st.nextToken());
-            remainArr[i] = sum % m;
-            if(remainArr[i] == 0){
+            sumArr[i] = sum % m;
+            if(sumArr[i] == 0){
                 answer++;
             }
-            cnt[(int) remainArr[i]]++;
+            cnt[(int) sumArr[i]]++;
         }
         
         for(int i = 0; i < m; i++){

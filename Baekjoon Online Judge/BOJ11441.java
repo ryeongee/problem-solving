@@ -25,7 +25,7 @@ public class BOJ11441{
                 range[j] = Integer.parseInt(column[j]);
             }            
             // prefixSum[i] = getPrefixSum(items, range[0], range[1]);
-            sb.append((items[range[1]] - items[range[0] - 1]) + "\n");
+            sb.append(getPrefixSum(items, range[0], range[1]) + "\n");
         }
 
         // for (int item : prefixSum) {
