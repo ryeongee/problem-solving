@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class BOJ1012 {
+public class Main {
     public static int[] MOVE_X = {1, 0, 0, -1};
     public static int[] MOVE_Y = {0, 1, -1, 0};
     public static boolean[][] VISITED;
