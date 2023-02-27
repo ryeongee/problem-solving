@@ -8,7 +8,7 @@ class Solution {
         int[] answer = {};
         int totalCount = 0;
         answer = new int[boards.length];
-        
+
         for(String[] board : boards){
             N = board.length;
             MAP = new int[N][N];
@@ -30,7 +30,7 @@ class Solution {
             }
             VISITED[position[0]][position[1]] = true;
             dfs(position[0], position[1]);
-            
+
             int tmpCount = 0;
             for(int i = 0; i < N; i++){
                 for(int j = 0; j < N; j++){
