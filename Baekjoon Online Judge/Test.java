@@ -1,4 +1,4 @@
-class Solution {
+class Test {
     public static int[] MOVE_X = {0, 0, 1, -1};
     public static int[] MOVE_Y = {1, -1, 0, 0};
     public static int[][] MAP;

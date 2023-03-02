@@ -1,4 +1,4 @@
-class Solution {
+class Test2 {
     public int solution(int n, int m, int k) throws Exception{
         int answer = -1;
         int addLoads = 0;

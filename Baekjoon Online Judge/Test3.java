@@ -24,7 +24,7 @@
 
  */
 
-class Solution {
+class Test3 {
     public int solution(String[] bakery_schedule, String current_time, int k) {
         int answer = -1;
         String[] time = current_time.split(":");
