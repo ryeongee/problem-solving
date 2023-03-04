@@ -16,7 +16,6 @@ public class BOJ2217 {
             ropes[i] = Integer.parseInt(br.readLine());
         }
         Arrays.sort(ropes, Collections.reverseOrder());
-
         answer = getMaxWeight(ropes, n);
         System.out.println(answer);
 
