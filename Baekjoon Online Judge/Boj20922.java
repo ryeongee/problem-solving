@@ -23,18 +23,13 @@ public class Boj20922{
         int maxLength = Integer.MIN_VALUE;
         int[] duplicateCountArray = new int[100001];
         int start = 0, end = 0;
-        while(start <= end){
+        while(start < n && end < n){
             if(end <= n - 1 && duplicateCountArray[arr[end]] < maxDuplicate){
-                duplicateCountArray[arr[end]]++;
-                end++;
+                duplicateCountArray[arr[end++]]++;
             } else if(duplicateCountArray[arr[end]] == maxDuplicate){
-                duplicateCountArray[arr[start]]--;
-                start++;
+                duplicateCountArray[arr[start++]]--;
             }
             maxLength = Math.max(maxLength, end - start);
-            if(end == n){
-                break;
-            }
         }
         return maxLength;
     }
