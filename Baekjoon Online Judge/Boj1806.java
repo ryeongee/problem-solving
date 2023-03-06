@@ -25,16 +25,20 @@ public class Boj1806{
         else System.out.println(min);
     }
 
-    public static int twoPointer(int[] arr, int n, int sum){
+    public static int twoPointer(int[] arr, int n, int targetSum){
         int min = Integer.MAX_VALUE;
         int start = 0;
         int end = 0;
-        int total = 0;
+        int currentSum = 0;
         while(start <= n && end <= n) {
-            if(total >= sum && min > end - start) min = end - start;
-            
-            if(total < sum) total += arr[end++];
-            else total -= arr[start++];
+            if(currentSum >= targetSum && min > end - start){
+                min = end - start;
+            } else if(currentSum < targetSum){
+                currentSum += arr[end++];
+            } 
+            else {
+                currentSum -= arr[start++];
+            }
         }
         return min;
     }
